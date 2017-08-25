@@ -42,10 +42,16 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 			
+			
+			$img = [
+				'replyToken' => $replyToken,
+				'imageFile' => '@/capture.jpg',
+			];
+			
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, 'replyToken=LSSCN/p3/lhdozDF8tABB70GY4vMlLFBcX/oacNQoUOE4Qw9Qd5G684vwkieb0WZKaARBB5GLk1/COCvyVgge4RSunJsU6GAuuMCXOfiAYd/9wriXor92gifDvBJe/FV5mT7fcEelqg9OegXelzHEAdB04t89/1O/w1cDnyilFU=&imageFile=@/images/capture.jpg' );
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $img);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
