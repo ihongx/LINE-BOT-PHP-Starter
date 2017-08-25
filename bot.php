@@ -22,12 +22,55 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
+
+
+
+//**********************************************	
+	
+	$post={
+		"messgaes" : $messages,
+		"replyToken":$replyToken,
+  "type": "template",
+  "altText": "this is a buttons template",
+  "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://shielded-bastion-88467.herokuapp.com/capture.jpg",
+      "title": "Menu",
+      "text": "Please select",
+      "actions": [
+          {
+            "type": "postback",
+            "label": "Buy",
+            "data": "action=buy&itemid=123"
+          },
+          {
+            "type": "postback",
+            "label": "Add to cart",
+            "data": "action=add&itemid=123"
+          },
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://www.google.co.th"
+          }
+      ]
+  }
+}
+
+
+
+//*************************************************************
+			
+		
+		
+			
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
+			//$data = [
+				//'replyToken' => $replyToken,
+				//'messages' => [$messages],
+			//];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
@@ -41,6 +84,18 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			
+			
+			
+
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 	}
 }
