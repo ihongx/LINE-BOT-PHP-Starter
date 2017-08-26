@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 		//	$post = json_encode($data);
 		
 		$post = '{  
-		'replyToken' : $replyToken,
+		"replyToken" : $replyToken,
 		 "messages":[
           {
                "type":"text",
