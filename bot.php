@@ -24,8 +24,9 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-			{	"replyToken":$replyToken },
+			$data = {
+				"replyToken":$replyToken ,
+				"messages":[
 				{
 				"type" : "text",
 				"text" : $text
@@ -34,9 +35,9 @@ if (!is_null($events['events'])) {
 			"originalContentUrl" : "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjom53Y8PTVAhWBp48KHaexDO8QjRwIBw&url=https%3A%2F%2Fwww.cesarsway.com%2Fdog-behavior&psig=AFQjCNE_fAT2zKTT06zKO96nIK5_Dy1sOA&ust=1503836235912612",
 			 "previewImageUrl" : "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiUvf7i8PTVAhVCpY8KHRjSAIEQjRwIBw&url=http%3A%2F%2Fwww.powerlifetothemax.com%2F%3Fp%3D1624&psig=AFQjCNE_fAT2zKTT06zKO96nIK5_Dy1sOA&ust=1503836235912612"
 			}
-			
-			
 			]
+			
+		}
 				
 			//$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
