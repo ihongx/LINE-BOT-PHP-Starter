@@ -60,9 +60,14 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนเป็ด[คำถาม|คำตอบ]';
 	 $arrPostData['messages'][1]['type'] = "text";
-    $arrPostData['messages'][1]['text'] = 'ควย';
+    $arrPostData['messages'][1]['text'] = 'TEST';
+	 $arrPostData['messages'][2]['type'] = "image";
+    $arrPostData['messages'][2]['originalContentUrl'] = 'https://twitter.com/rogeryc';
+	$arrPostData['messages'][2]['previewImageUrl'] = 'https://twitter.com/rogeryc';
   }
 }
+
+
 
 
 $channel = curl_init();
