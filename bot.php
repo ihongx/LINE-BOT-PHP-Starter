@@ -18,17 +18,17 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			
-		$messages = 
+		$messages = [
         
-        [
-               "type"=>"text",
-               "text"=>$text
-          ],
-          [
-               "type"=>"text",
-               "text"=>"May I help you?"
-          ]
-    
+        (
+               'type'=>'text',
+               'text'=>$text
+          ),
+          (
+               'type'=>'text',
+               'text'=>'May I help you?'
+          )
+    ]
 ;
 			
 
