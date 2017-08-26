@@ -18,12 +18,8 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				
-				'type' => 'text',
-	     	'text' => $text,
-				'type' => 'text',
-				'text' => 'TEST',
-				    "type": "sticker",
+		
+	   "type": "sticker",
     "packageId": "1",
     "stickerId": "1"
 			];
