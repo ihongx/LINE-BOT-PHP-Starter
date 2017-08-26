@@ -1,3 +1,5 @@
+
+
 <?php
 $access_token = 'LSSCN/p3/lhdozDF8tABB70GY4vMlLFBcX/oacNQoUOE4Qw9Qd5G684vwkieb0WZKaARBB5GLk1/COCvyVgge4RSunJsU6GAuuMCXOfiAYd/9wriXor92gifDvBJe/FV5mT7fcEelqg9OegXelzHEAdB04t89/1O/w1cDnyilFU=';
 
@@ -22,11 +24,29 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
 
-
-//**********************************************	
-	
+			echo $result . "\r\n";
+			
+			
+			//**********************************************	
+/*
 	$post={
 		"messgaes" : $messages,
 		"replyToken":$replyToken,
@@ -34,7 +54,7 @@ if (!is_null($events['events'])) {
   "altText": "this is a buttons template",
   "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://shielded-bastion-88467.herokuapp.com/capture.jpg",
+      "thumbnailImageUrl": "http://",
       "title": "Menu",
       "text": "Please select",
       "actions": [
@@ -61,33 +81,8 @@ if (!is_null($events['events'])) {
 
 //*************************************************************
 			
-		
-		
 			
-			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			//$data = [
-				//'replyToken' => $replyToken,
-				//'messages' => [$messages],
-			//];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
-
-			echo $result . "\r\n";
-			
-			
-			
-
+	*/		
 			
 			
 			
@@ -99,6 +94,11 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "NOT OK";
+echo "OK";
 
 ?>
+
+
+			
+		
+		
