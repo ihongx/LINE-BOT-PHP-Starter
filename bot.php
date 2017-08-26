@@ -59,6 +59,8 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนเป็ด[คำถาม|คำตอบ]';
+	 $arrPostData['messages'][1]['type'] = "text";
+    $arrPostData['messages'][1]['text'] = 'ควย';
   }
 }
 
