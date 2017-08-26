@@ -62,8 +62,8 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
 	 $arrPostData['messages'][1]['type'] = "text";
     $arrPostData['messages'][1]['text'] = 'TEST';
 	 $arrPostData['messages'][2]['type'] = "image";
-    $arrPostData['messages'][2]['originalContentUrl'] = 'https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjFjNLPlfXVAhVLu48KHQCVD_0QjRwIBw&url=https%3A%2F%2Fwww.royalcanin.com%2Fproducts%2Fdog%2Fmedium&psig=AFQjCNH4V9SgS46p06msdW4MPHDF7KxNmA&ust=1503846153458064';
-	$arrPostData['messages'][2]['previewImageUrl'] = 'https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjFjNLPlfXVAhVLu48KHQCVD_0QjRwIBw&url=https%3A%2F%2Fwww.royalcanin.com%2Fproducts%2Fdog%2Fmedium&psig=AFQjCNH4V9SgS46p06msdW4MPHDF7KxNmA&ust=1503846153458064';
+    $arrPostData['messages'][2]['originalContentUrl'] = 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg';
+	$arrPostData['messages'][2]['previewImageUrl'] = 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg';
   }
 }
 
