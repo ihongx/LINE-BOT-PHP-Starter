@@ -63,7 +63,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "NOT OK";
+echo "I am Hong";
 ?>
 
 			
