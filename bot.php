@@ -37,8 +37,8 @@ if (!is_null($events['events'])) {
 //**********************************************	
 
 	$post={
-		"messgaes" : $messages,
-		"replyToken":$replyToken,
+	//	"messgaes" : $messages,
+	//	"replyToken":$replyToken,
   "type": "template",
   "altText": "this is a buttons template",
   "template": {
