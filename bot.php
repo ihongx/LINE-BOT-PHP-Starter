@@ -12,37 +12,6 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 	
-
-	
-function post_file($site,$file){
-$filepost = curl_int();
-curl_setopt($filepost, CURLOPT_POST, 1);
-$args['name_image[]'] = new CurlFile($file, 'image/jpeg');
-curl_setopt($filepost, CURLOPT_POSTFIELDS, $args);
-    ob_start();
-    return curl_exec ($filepost);
-    ob_end_clean();
-    curl_close ($filepost);
-    unset($filepost); 
-
-
-  if(curl_errno($filepost)) {
-    print_r(curl_error($filepost));
-    die();
-  }
-  $result  = curl_exec($filepost);
-  curl_close($filepost);
-  return $result;
-	
-
-}
-			
-			
-			
-			
-			
-			
-			
 			
 			
 			
@@ -56,12 +25,20 @@ curl_setopt($filepost, CURLOPT_POSTFIELDS, $args);
 				'type' => 'text',
 				'text' => $text
 			];
+			
+	$images = [	
+    "type"=> "image",
+    "originalContentUrl"= "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjom53Y8PTVAhWBp48KHaexDO8QjRwIBw&url=https%3A%2F%2Fwww.cesarsway.com%2Fdog-behavior&psig=AFQjCNE_fAT2zKTT06zKO96nIK5_Dy1sOA&ust=1503836235912612",
+    "previewImageUrl"= "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiUvf7i8PTVAhVCpY8KHRjSAIEQjRwIBw&url=http%3A%2F%2Fwww.powerlifetothemax.com%2F%3Fp%3D1624&psig=AFQjCNE_fAT2zKTT06zKO96nIK5_Dy1sOA&ust=1503836235912612"
+];
+			
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
+				'images' =>[$images]
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -79,11 +56,7 @@ curl_setopt($filepost, CURLOPT_POSTFIELDS, $args);
 			
 			
 			
-		$aaa=	post_file($url,"https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwia6OK66vTVAhWIwI8KHQjXCKoQjRwIBw&url=https%3A%2F%2Fwww.royalcanin.com%2Fproducts%2Fdog%2Fmedium&psig=AFQjCNFC17p_SgVP0CReb4lyNZ-EvqHp1Q&ust=1503834563250208");
-			
-			
-			echo $aaa;
-			
+				
 			
 			
 			
