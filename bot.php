@@ -18,8 +18,8 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			
-		$messages = "{
-         "messages":[
+		$messages = 
+        
           {
                "type":"text",
                "text":$text
@@ -28,8 +28,8 @@ if (!is_null($events['events'])) {
                "type":"text",
                "text":"May I help you?"
           }
-      ]
-}";
+    
+};
 			
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -54,4 +54,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OOK";
+echo "OOKK";
