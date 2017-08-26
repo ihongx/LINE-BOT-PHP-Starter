@@ -77,7 +77,7 @@ if (!is_null($events['events'])) {
 			
 			
 			
-			$post = json_encode($data);
+		//	$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
