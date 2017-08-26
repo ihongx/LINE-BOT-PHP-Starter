@@ -26,27 +26,16 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+		
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
-
-			echo $result . "\r\n";
+	//	$data = [
+	//			'replyToken' => $replyToken,
+	//			'messages' => [$messages],
+	//		];
 			
 			
-			//**********************************************	
-/*
+//**********************************************	
+
 	$post={
 		"messgaes" : $messages,
 		"replyToken":$replyToken,
@@ -54,7 +43,7 @@ if (!is_null($events['events'])) {
   "altText": "this is a buttons template",
   "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "http://",
+      "thumbnailImageUrl": "https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwia6OK66vTVAhWIwI8KHQjXCKoQjRwIBw&url=https%3A%2F%2Fwww.royalcanin.com%2Fproducts%2Fdog%2Fmedium&psig=AFQjCNFC17p_SgVP0CReb4lyNZ-EvqHp1Q&ust=1503834563250208",
       "title": "Menu",
       "text": "Please select",
       "actions": [
@@ -82,8 +71,28 @@ if (!is_null($events['events'])) {
 //*************************************************************
 			
 			
-	*/		
+	
+		
 			
+			
+			
+			
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
+			
+			
+	
 			
 			
 			
