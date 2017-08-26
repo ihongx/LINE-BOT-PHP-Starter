@@ -11,6 +11,41 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+	
+
+	
+function post_file($site,$file){
+$filepost = curl_int();
+curl_setopt($filepost, CURLOPT_POST, 1);
+$args['name_image[]'] = new CurlFile($file, 'image/jpeg');
+curl_setopt($filepost, CURLOPT_POSTFIELDS, $args);
+    ob_start();
+    return curl_exec ($filepost);
+    ob_end_clean();
+    curl_close ($filepost);
+    unset($filepost); 
+
+
+  if(curl_errno($filepost)) {
+    print_r(curl_error($filepost));
+    die();
+  }
+  $result  = curl_exec($filepost);
+  curl_close($filepost);
+  return $result;
+	
+
+}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
@@ -39,9 +74,25 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-
+			
 			echo $result . "\r\n";
+			
+			
+			
+		$aaa=	post_file($url,"https://www.google.co.th/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwia6OK66vTVAhWIwI8KHQjXCKoQjRwIBw&url=https%3A%2F%2Fwww.royalcanin.com%2Fproducts%2Fdog%2Fmedium&psig=AFQjCNFC17p_SgVP0CReb4lyNZ-EvqHp1Q&ust=1503834563250208");
+			
+			
+			echo $aaa;
+			
+			
+			
+			
 		}
 	}
 }
 echo "NOT OK";
+?>
+
+			
+		
+		
