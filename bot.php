@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 			];
 		//	$post = json_encode($data);
 		
-		$post = '{  
+		$post = {  
 		"replyToken" : $replyToken,
 		 "messages":[
           {
@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
           }
       ]
 
-		}';
+		};
 		
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
@@ -60,4 +60,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "I am PisarnW";
+echo "I am PisarnWA";
