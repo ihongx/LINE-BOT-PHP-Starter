@@ -35,7 +35,7 @@ if (!is_null($events['events'])) {
 		 "messages":[
           {
                "type":"text",
-               "text":"Hello, user"
+               "text":$text
           },
           {
                "type":"text",
@@ -60,4 +60,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "I am Pisarn";
+echo "I am PisarnW";
