@@ -18,8 +18,11 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
-				'text' => $text
+				
+				{'type' => 'text',
+				'text' => $text},
+				{'type' => 'text',
+				'text' => 'TEST'},
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -28,23 +31,9 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-		//	$post = json_encode($data);
+			$post = json_encode($data);
 		
-		$post = {  
-		"replyToken" : $replyToken,
-		 "messages":[
-          {
-               "type":"text",
-               "text":$text
-          },
-          {
-               "type":"text",
-               "text":"May I help you?"
-          }
-      ]
-
-		};
-		
+				
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
