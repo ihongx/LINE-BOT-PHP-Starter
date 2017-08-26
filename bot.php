@@ -64,6 +64,12 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
 	 $arrPostData['messages'][2]['type'] = "image";
     $arrPostData['messages'][2]['originalContentUrl'] = 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg';
 	$arrPostData['messages'][2]['previewImageUrl'] = 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg';
+		 $arrPostData['messages'][3]['type'] = "image";
+    $arrPostData['messages'][3]['originalContentUrl'] = 'https://i.pinimg.com/736x/da/af/73/daaf73960eb5a21d6bca748195f12052--lion-photography-lion-kings.jpg';
+	$arrPostData['messages'][3]['previewImageUrl'] = 'https://i.pinimg.com/736x/da/af/73/daaf73960eb5a21d6bca748195f12052--lion-photography-lion-kings.jpg';
+		 $arrPostData['messages'][4]['type'] = "image";
+    $arrPostData['messages'][4]['originalContentUrl'] = 'https://i.pinimg.com/736x/27/55/3c/27553cb31d768ab4c51163768275efe7--by-chloe--in.jpg';
+	$arrPostData['messages'][4]['previewImageUrl'] = 'https://i.pinimg.com/736x/27/55/3c/27553cb31d768ab4c51163768275efe7--by-chloe--in.jpg';
   }
 }
 
