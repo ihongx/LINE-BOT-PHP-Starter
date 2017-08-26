@@ -35,7 +35,19 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-			$post = json_encode($data);
+			
+$post = json_encode(['replyToken' => $replyToken,
+                     'messages' => [
+                      'type' => 'text',
+                       'text' => '12345678'
+  ]
+);
+			
+			
+			
+			
+			
+			
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
@@ -51,4 +63,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OOKK";
+echo "OOKKK";
