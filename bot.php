@@ -62,8 +62,8 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
 	 $arrPostData['messages'][1]['type'] = 'text';
     $arrPostData['messages'][1]['text'] = 'TEST';
 	 $arrPostData['messages'][2]['type'] = "image";
-    $arrPostData['messages'][2]['originalContentUrl'] = 'https://drive.google.com/file/d/0B6M1dS0Ya-QjenVTZDJLUmdDdGM/view?usp=sharing';
-	$arrPostData['messages'][2]['previewImageUrl'] = 'https://drive.google.com/file/d/0B6M1dS0Ya-QjenVTZDJLUmdDdGM/view?usp=sharing';
+    $arrPostData['messages'][2]['originalContentUrl'] = 'https://raw.githubusercontent.com/ihongx/LINE-BOT-PHP-Starter/master/Capture.JPG';
+	$arrPostData['messages'][2]['previewImageUrl'] = 'https://raw.githubusercontent.com/ihongx/LINE-BOT-PHP-Starter/master/Capture.JPG';
 
 	
 	
