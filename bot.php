@@ -70,8 +70,8 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
 		$arrPostData['messages'][3]['type'] = "location";
 		$arrPostData['messages'][3]['title'] = "my location";
 		$arrPostData['messages'][3]['address'] = "Bangkok, Thailand";
-		$arrPostData['messages'][3]['latitude'] = "35.65910807942215";
-		$arrPostData['messages'][3]['longitude'] = "139.70372892916203';
+		$arrPostData['messages'][3]['latitude'] = 35.65910807942215;
+		$arrPostData['messages'][3]['longitude'] = 139.70372892916203;
 	
 	
   }
