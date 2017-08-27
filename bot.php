@@ -62,7 +62,7 @@ if (strpos($_msg, 'สอนเป็ด') !== false) {
 	 $arrPostData['messages'][1]['type'] = 'text';
     $arrPostData['messages'][1]['text'] = 'TEST';
 	 $arrPostData['messages'][2]['type'] = "image";
-    $arrPostData['messages'][2]['originalContentUrl'] = 'https://github.com/ihongx/LINE-BOT-PHP-Starter/blob/master/Capture.JPG';
+    $arrPostData['messages'][2]['originalContentUrl'] = 'https://github.com/ihongx/LINE-BOT-PHP-Starter/blob/master/Capture.JPG?raw=true';
 	$arrPostData['messages'][2]['previewImageUrl'] = 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg';
 
 	
