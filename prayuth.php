@@ -51,8 +51,8 @@
         $message = str_replace('รูป', '', $message);
         $message = trim($message);
 
-        $image_url =_string($message);
-       // $image_url ='https://www.tamtid.com/wp-content/uploads/2018/10/1-8.jpg';
+     //   $image_url =_string($message);
+       $image_url ='https://www.tamtid.com/wp-content/uploads/2018/10/1-8.jpg';
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
